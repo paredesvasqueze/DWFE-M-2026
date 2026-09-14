@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Con esta pagina estamos aprendiendo accesibilidad">
     <title>Document</title>
     <style>
         a:focus,button:focus
@@ -10,12 +11,11 @@
             outline: 10px solid red;      
             outline-offset: 10px;
         }
-        body
+        body  
         {
             background-color: antiquewhite;
-            color: azure;
+            color: blue;
         }
-
 
     </style>
 </head>
@@ -32,11 +32,49 @@
     <main>
         <h2>Nuestros productos</h2>
         <button>Comprar Aqui</button> 
+
+        <img src="feria.jpg" alt="Imagen de la Feria Institucional" >
+        <img src="images.jpg" alt="">
+
+        <form id="formulario">
+            <label for="usuario"> </label>
+            <input type="text" placeholder="Ingrese usuario" name="usuario">
+
+            <label for="contrasena"> </label>
+            <input type="text" placeholder="Ingrese contraseña" name="contrasena">
+            <button>Ingresar</button>
+        </form>
+        <!--Los enlaces para navegar -->
+        <a href="nosotros.html">Ir a Nosotros</a>
+        <!--Los botones se suan para acciones -->
+        <button aria-label="Guardar Registro">💾🫣</button>
+
+        <div style="background: blue; height: 200px; width: 200px;" 
+        onclick="alert('Si pude')"></div>
+
+        <label for="correo">Correo electronico</label>
+        <input id="correo" aria-describedby="ayuda">
+        <p id="ayuda">Ingrese un correo válido.</p>
+            
+ +
+        
+
     </main>
 
     <footer>    
         <p>Instituto Trujillo</p>
     </footer>
+
+    <script>
+        const miformulario = document.getElementById("formulario");
+        miformulario.addEventListener("submit",(e)=>
+        {
+            e.preventDefault();
+            alert("Jojolete ya no recargaste")
+        }  
+    )
+
+    </script>
 
 </body>
 </html>
