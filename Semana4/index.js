@@ -1,44 +1,20 @@
-/*
-fetch('https://jsonplaceholder.typicode.com/posts')
-.then(response => response.json())
-.then(data => console.log(data))
-*/
-/*
-console.log("holita antes");
-
-setTimeout(() => {
-    console.log("Hola");
-    },2000
- )
-
- console.log("holitas");
-*/
-
-let edad = new Promise((resolve,reject)=>{
-    let anios = 19;
-    if ( anios >= 18)
-    {
-        setTimeout(()=>{
-            //console.log("oa");
-            resolve("Si puede votar");    
-        },10000  );
-        
-    }
-    else
-    {
-        reject("No puede votar");
-    }
-} ) 
-
-
-function devolverestado()
+async function llenartablita()
 {
-    console.log(edad);
+    response = await fetch("https://jsonplaceholder.typicode.com/users");
+    data = await response.json()
+
+    let cuerpito = "";
+
+    data.forEach(element => {
+        cuerpito += `<tr><td>${element.id}</td>
+                        <td>${element.name}</td>
+                         <td>${element.username}</td>
+                         <td>${element.email}</td>
+                         <td>${element.phone}</td></tr>
+        `});
+    
+    document.getElementById("cuerpo").innerHTML= cuerpito;
+    
 }
-//console.log(promesa);
 
-edad.then( exito => console.log(exito))
-.catch( fallo => console.log(fallo));
-
- 
-
+llenartablita();
