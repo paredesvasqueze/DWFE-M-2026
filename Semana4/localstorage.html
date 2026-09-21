@@ -21,7 +21,7 @@
     <main>
         <label for="pokemon" >Escribe el nombre del pokemon</label>
         <input type="text" id="pokemon">
-        <button id="mostrar">Mostrar Pokemon</button><br><br>
+        <button id="mostrar" onclick="buscarpokemon()">Mostrar Pokemon</button><br><br>
 
         <div >
             <label for="nombre" >Nombre</label>
@@ -30,13 +30,10 @@
             <label for="experiencia" >Experiencia</label>
             <input type="text" id="experiencia">
             <br>
-            <img id = "imagenpokemon">     
+            <img id = "imagenpokemon">  
+
         </div>
-
-
-
-
-
     </main>
+    <script src = "localstorage.js"></script>
 </body>
 </html>
