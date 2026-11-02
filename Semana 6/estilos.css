@@ -1,0 +1,48 @@
+.menu a:not(.activo) {
+color: brown;
+}
+
+
+.menunm   a:is(.visitados,.otros) {
+color:blue ;
+}
+
+
+.boton::after {
+content: "≽(◕ ᴗ ◕)≼ ";
+}
+
+input::placeholder 
+{
+    font-weight: bold;
+}
+
+p { /*0,0,1*/
+    color: blue ;
+}
+
+.texto { /*0,1,0*/
+    color: green;
+}
+
+.contenedor .texto { /*0, 2, 0*/
+    color: orange;
+}
+
+button:hover{
+    border:1px solid red;
+    
+}
+/*Aqui estoy aplicando hover*/
+
+#especial { /*1,0,0*/
+    color: red;
+}
+
+div p.destacado { /*0,1,2*/
+    color: purple;
+}
+
+.contenedor div p { /*0,1,2*/
+    color: brown;
+}

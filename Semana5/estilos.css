@@ -1,0 +1,40 @@
+
+.contenedor
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    gap: 20px  ;
+    height: 200px;
+    width:  200px;    
+
+}
+
+.articulo
+{    
+    height: 50px;
+    width:  50px;
+    border: 2px solid blue;
+}
+
+.articulo:last-child {
+    grid-column: 2;
+}
+
+a[target="_blank"] {
+font-weight: bold;
+}
+
+nav > a {
+color: green;
+}
+
+ a + p {
+color: blue;
+}
+
+button:hover {
+   transform: scale(2);
+}
+
+
+

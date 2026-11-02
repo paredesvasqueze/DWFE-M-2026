@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #263445;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 3px 10px #0000000d;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a855f7;
+        }
+
+        /* Contenedor principal */
+        .contenedor {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* Contenido principal */
+        main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #00000008;
+        }
+
+        main h2 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            margin-bottom: 15px;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .tarjeta {
+            background-color: #f0f0ff;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #6366f1;
+        }
+
+        .tarjeta h3 {
+            color: #4338ca;
+            margin-bottom: 8px;
+        }
+
+        /* Barra lateral */
+        aside {
+            background-color: #ede9fe;
+            padding: 25px;
+            border-radius: 15px;
+            align-self: start;
+        }
+
+        aside h2 {
+            color: #6d28d9;
+            margin-bottom: 15px;
+        }
+
+        aside ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        aside li {
+            margin-bottom: 10px;
+        }
+
+        aside a {
+            color: #5b21b6;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #263445;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Diseño adaptable a móviles */
+        @media (max-width: 768px) {
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi Página Web</h1>
+        <p>Un espacio para aprender, compartir y crecer</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+
+        <main id="inicio">
+            <section>
+                <h2>Bienvenido a nuestro sitio</h2>
+
+                <p>
+                    Esta es una página web de ejemplo creada con HTML5
+                    semántico y CSS. Su diseño es sencillo, moderno
+                    y fácil de utilizar.
+                </p>
+
+                <p>
+                    Utilizamos etiquetas semánticas para organizar
+                    correctamente el contenido y facilitar su
+                    comprensión por los navegadores y las tecnologías
+                    de asistencia.
+                </p>
+            </section>
+
+            <section id="servicios">
+                <h2>Nuestros servicios</h2>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Diseño web</h3>
+                        <p>
+                            Creamos diseños atractivos y adaptables
+                            a diferentes dispositivos.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Desarrollo</h3>
+                        <p>
+                            Construimos páginas web organizadas,
+                            accesibles y funcionales.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="nosotros" style="margin-top: 25px;">
+                <h2>Sobre nosotros</h2>
+                <p>
+                    Somos un espacio dedicado al aprendizaje y a la
+                    creatividad digital, donde las ideas se convierten
+                    en proyectos.
+                </p>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Información adicional</h2>
+
+            <p>
+                Aquí puedes colocar contenido complementario
+                relacionado con el tema principal.
+            </p>
+
+            <h3>Enlaces útiles</h3>
+            <ul>
+                <li><a href="#inicio">Volver al inicio</a></li>
+                <li><a href="#servicios">Ver servicios</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+            </ul>
+
+            <h3>Dato interesante</h3>
+            <p>
+                HTML5 ofrece elementos semánticos que ayudan a
+                describir la función de cada parte de una página.
+            </p>
+        </aside>
+
+    </div>
+
+    <footer id="contacto">
+        <p>&copy; 2026 Mi Página Web. Todos los derechos reservados.</p>
+        <p>Contacto: contacto@ejemplo.com</p>
+    </footer>
+
+</body>
+</html>

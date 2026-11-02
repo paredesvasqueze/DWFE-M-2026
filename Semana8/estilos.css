@@ -1,0 +1,48 @@
+.padre
+{
+    font-size: 10vw;
+}
+.hijo
+{
+    font-size:0.5em;
+}
+.nieto
+{    
+    font-size:0.5em;
+}
+.contenedor
+{
+    width: 200px;
+    height: 200px;
+    border: 20px solid green;
+    box-sizing  :border-box;    
+}
+.contenedorhijo
+{
+    width: calc(75% - 18px);    
+}
+
+.minimo
+{
+width: min(90%, 500px);
+margin: 0 auto;
+background: yellow;
+height: 50px;
+}
+
+.maximo
+{
+width: max(90%, 500px);
+margin: 0 auto;
+background: green;
+height: 50px;
+}
+
+.variable
+{
+width: clamp(200px, 90%, 600px);
+font-size: clamp(25px, 10vw, 80px);
+margin: 0 auto;
+background: blue;
+height: 50px;
+}
